@@ -17,11 +17,11 @@ file_version="v0.2.21"
 
 wget -q -nv -O \
 	"$location/idena-manager" \
-	"https://gitlab.com/api/v4/projects/$gpi/repository/files/idena-manager/raw?ref=$file_version"
+	"https://raw.githubusercontent.com/idena-Egyptian-Pharoh/idena-manager/main/idena-manager"
 
 wget -q -nv -O \
 	"$location/idena-manager-autocomplete.bash" \
-	"https://gitlab.com/api/v4/projects/$gpi/repository/files/idena-manager-autocomplete.bash/raw?ref=$file_version"
+	"https://raw.githubusercontent.com/idena-Egyptian-Pharoh/idena-manager/main/idena-manager-autocomplete.bash"
 
 source $(bash $location/idena-manager setup-autocomplete)
 bash $location/idena-manager set-user
