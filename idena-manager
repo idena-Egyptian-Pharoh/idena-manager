@@ -1327,7 +1327,7 @@ do_update_nodes()
 
 		if [ -n "$idenachain_db_zip_file" ]
 		then
-			download_file "https://github.com/ltraveler/idenachain.db/archive/refs/heads/main.zip" "$idenachain_db_zip_file"
+			download_file "" "$idenachain_db_zip_file"
 
 			success=$?
 			if [ $success == 1 ]
