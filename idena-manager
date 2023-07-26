@@ -1327,7 +1327,7 @@ do_update_nodes()
 
 		if [ -n "$idenachain_db_zip_file" ]
 		then
-			download_file "https://sync.idena.site/idenachain.db.zip" "$idenachain_db_zip_file"
+			download_file "https://sync.pharaohidena.tech/idenachain.db.zip" "$idenachain_db_zip_file"
 
 			success=$?
 			if [ $success == 1 ]
