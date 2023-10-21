@@ -1454,9 +1454,9 @@ self_update()
 		success_notification "Updating to version " "$latest_version"
 		wget -q -nv -O \
 			"$location/$suim" \
-			"https://gitlab.com/api/v4/projects/$gpi/repository/files/$suim/raw?ref=$latest_version"
+			"https://raw.githubusercontent.com/idena-Egyptian-Pharoh/idena-manager/main/self-updater-idena-manager"
 		chmod +x "$location/$suim"
-		touch "$location/idena-manager-should-self-update"
+		touch "$location/self-updater-idena-manager"
 	fi
 }
 
