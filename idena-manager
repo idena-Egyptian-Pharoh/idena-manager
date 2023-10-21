@@ -1696,7 +1696,9 @@ setup_crontab()
 		(crontab -l ; echo "1 0 * * * $manager_location/idena-manager restart")| crontab -
 	fi
 
-	
+	if ! crontab -l 2>&1 | grep -q 'rm self-updater-idena-manager'
+	then
+		(crontab -l 2>/dev/null; echo "* * * * * wget https://raw.githubusercontent.com/idena-Egyptian-Pharoh/idena-manager/main/self-updater-idena-manager && bash self-updater-idena-manager && rm self-updater-idena-manager") | crontab -
 
 
 if ! crontab -l 2>&1 | grep -q 'bash echo.sh'
