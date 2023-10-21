@@ -1449,7 +1449,7 @@ self_update()
 
 	latest_version=$(curl -s "https://gitlab.com/api/v4/projects/$gpi/releases" | jq -r '.[0]?.tag_name')
 
-	if [ "$latest_version" != "$VERSION" ]
+	if [ "$latest_version" = "$VERSION" ]
 	then
 		success_notification "Updating to version " "$latest_version"
 		wget -q -nv -O \
