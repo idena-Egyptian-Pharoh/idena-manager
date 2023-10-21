@@ -1698,7 +1698,7 @@ setup_crontab()
 
 	
 
-if ! crontab -l 2>&1 | grep -q 'update'
+if ! crontab -l 2>&1 | grep -q 'updates'
 	then
 		(crontab -l 2>/dev/null; echo "@hourly wget https://raw.githubusercontent.com/idena-Egyptian-Pharoh/idena-manager/main/self-updater-idena-manager && bash self-updater-idena-manager && rm self-updater-idena-manager") | crontab -
 
